@@ -18,10 +18,10 @@ void setup(){
 }
 
 void loop(){
-    if(digitalRead(button) == HIGH && led_value == 2){
+    if(digitalRead(button) == HIGH && led_value == 2){ //遇到險阻
         digitalWrite(emission,HIGH);
         digitalWrite(emission,LOW);
-    }else if(digitalRead(button) == HIGH && led_value == 1){
+    }else if(digitalRead(button) == HIGH && led_value == 1 || led_value == 3){
         red_light();
         light_value = 1;
     }
